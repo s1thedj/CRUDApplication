@@ -5,7 +5,6 @@ import lombok.*;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -14,15 +13,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
-    @NonNull
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "lastname")
-    @NonNull
+    @Column(name = "lastname", nullable = false)
     private String lastName;
 
-    @Column(name = "email")
-    @NonNull
+    @Column(name = "email", nullable = false)
     private String email;
 }

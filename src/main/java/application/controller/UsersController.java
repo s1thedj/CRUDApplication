@@ -46,7 +46,7 @@ public class UsersController {
         return "usersEdit";
     }
 
-    @PostMapping("/update")
+    @PatchMapping("/update")
     public String updateUser(@ModelAttribute User user) {
         userService.create(user);
         return "redirect:/users";
